@@ -7,7 +7,7 @@ CXX = g++
 CXXFLAGS = -std=c++20 -Wall
 
 # Source files
-SRCS = main.cpp FileManager/FileManager.cpp   # List all your source files
+SRCS = main.cpp FileManager/FileManager.cpp Request/RequestService.cpp  # List all your source files
 
 # Object files
 OBJS = $(SRCS:.cpp=.o)

@@ -1,13 +1,24 @@
 #include "FileManager/FileManager.hpp"
-
+#include "Request/RequestService.hpp"
 int main(int argc, char** argv) {
 
-    std::string path = "Countries/all.json";
-
-    FileManager* fm = new FileManager(path);
+    auto req = new RequestService("FileManager/Country/all.json");
 
 
-    delete fm;
+    std::string input;
+    std::string alpha;
+
+    while(alpha.empty()) {
+        std::cout << "Choose a country: " << std::endl;
+        std::cin >> input;
+        alpha = req->getAlpha2ByName(input);
+    }
+
+
+    std::cout << alpha;
+
+
+    delete req;
 
 
 }
