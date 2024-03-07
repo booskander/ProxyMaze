@@ -26,8 +26,6 @@ public:
             delete country;
         });
     }
-
-
 };
 
 
