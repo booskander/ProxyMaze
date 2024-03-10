@@ -3,9 +3,10 @@
 #include "../FileManager/FileManager.hpp"
 #include <algorithm>
 #include <cctype>
+#include <httplib.h>
 class RequestService {
 private:
-
+    std::string baseURL = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=";
     FileManager* fm_;
     std::vector<Country*> countries;
 
@@ -20,6 +21,10 @@ public:
     const std::string getAlpha2ByName(std::string& name);
 
     void displayCountries() const;
+
+    std::string forgeRequest(std::string protocol = "all", std::string country="all", bool SSL);
+
+    void fetchProxies(std::string protocol = "all", std::string country="all", bool SSL);
 
     ~RequestService() {
         std::for_each(countries.begin(), countries.end(), [](auto country) {

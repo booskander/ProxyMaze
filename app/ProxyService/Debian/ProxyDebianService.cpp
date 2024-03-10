@@ -8,8 +8,10 @@ void ProxyDebianService::addProxyGate(std::string proxyType, std::string IP, std
 
         fs.open(configFile, std::fstream::out | std::fstream::app);
         if (fs.is_open()) {
-            std::string format = proxyType + " " + IP + " " + port;
+            std::string format = proxyType + " " + IP + " " + port + '\n';
             fs << format;
+            fs << std::endl;
+            fs.close();
         } else {
             std::cerr << "File is closed already" << std::endl;
         }
