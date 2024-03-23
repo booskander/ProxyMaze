@@ -1,0 +1,19 @@
+{
+    "version": 4,
+    "vendor": {
+        "conan": {}
+    },
+    "include": [
+        "${sourceDir}/conan/debug/CMakePresets.json"
+    ],
+
+    "configurePresets": [
+        {
+            "name": "conan-debug",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/conan/debug/conan_toolchain.cmake"
+            }
+        }
+    ]
+}

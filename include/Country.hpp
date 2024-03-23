@@ -1,6 +1,7 @@
 #ifndef COUNTRY_HPP
 #define COUNTRY_HPP
 #include <string>
+#include <iostream>
 class Country {
 
 private:

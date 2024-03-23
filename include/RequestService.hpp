@@ -1,9 +1,10 @@
 #ifndef REQUEST_SERVICE
 #define REQUEST_SERVICE
-#include "../FileManager/FileManager.hpp"
+#include "FileManager.hpp"
 #include <algorithm>
 #include <cctype>
-#include <httplib.h>
+// #include "httplib.h"
+// #include "httplib/httplib.h"
 class RequestService {
 private:
     std::string baseURL = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=";

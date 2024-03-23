@@ -1,2 +1,6 @@
 **/build/
 **/bin/
+**.vscode/
+**/venv
+**/conan/
+**./vscode

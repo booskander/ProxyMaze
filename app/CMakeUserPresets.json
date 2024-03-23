@@ -1,9 +1,0 @@
-{
-    "version": 4,
-    "vendor": {
-        "conan": {}
-    },
-    "include": [
-        "/home/kali/gitrepos/ProxyMaze/app/build/Release/generators/CMakePresets.json"
-    ]
-}
