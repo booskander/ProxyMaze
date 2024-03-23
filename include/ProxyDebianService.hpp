@@ -1,5 +1,4 @@
-#ifndef PROXY_DEBIAN
-#define PROXY_DEBIAN
+#pragma once
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
@@ -17,7 +16,3 @@ public:
         system("cat /etc/proxychains.conf");
     }
 };
-
-
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef FILE_MANAGER
-#define FILE_MANAGER
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -28,6 +27,3 @@ public:
     }
 
 };
-
-
-#endif

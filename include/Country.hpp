@@ -1,5 +1,4 @@
-#ifndef COUNTRY_HPP
-#define COUNTRY_HPP
+#pragma once
 #include <string>
 #include <iostream>
 class Country {
@@ -27,5 +26,3 @@ public:
 
      
 };
-
-#endif

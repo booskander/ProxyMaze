@@ -1,5 +1,4 @@
-#ifndef REQUEST_SERVICE
-#define REQUEST_SERVICE
+#pragma once
 #include "FileManager.hpp"
 #include <algorithm>
 #include <cctype>
@@ -23,9 +22,9 @@ public:
 
     void displayCountries() const;
 
-    std::string forgeRequest(std::string protocol = "all", std::string country="all", bool SSL);
+    std::string forgeRequest(std::string protocol = "all", std::string country="all", bool SSL=true);
 
-    void fetchProxies(std::string protocol = "all", std::string country="all", bool SSL);
+    void fetchProxies(std::string protocol = "all", std::string country="all", bool SSL=true);
 
     ~RequestService() {
         std::for_each(countries.begin(), countries.end(), [](auto country) {
@@ -44,5 +43,3 @@ public:
         return message_;
     }
 };
-
-#endif

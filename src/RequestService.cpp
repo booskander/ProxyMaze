@@ -34,7 +34,7 @@ void RequestService::displayCountries() const {
     });
 }
 
-std::string RequestService::forgeRequest(std::string protocol = "all", std::string country="all", bool SSL =) {
+std::string RequestService::forgeRequest(std::string protocol, std::string country, bool SSL) {
     
     if (country != "all") {
         country = this->getAlpha2ByName(country);
@@ -46,9 +46,9 @@ std::string RequestService::forgeRequest(std::string protocol = "all", std::stri
 }
 
 
-void RequestService::fetchProxies(std::string protocol = "all", std::string country="all", bool SSL) {
+void RequestService::fetchProxies(std::string protocol, std::string country, bool SSL) {
     std::string command = "curl --location";
     std::string url = this->forgeRequest(protocol, country, SSL);
     
-    system(url);
+    system(url.c_str());
 }
