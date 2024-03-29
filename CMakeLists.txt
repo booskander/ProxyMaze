@@ -5,11 +5,19 @@ project(ProxyMaze)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
+# Include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(LIB 
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/FileManager.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/ProxyDebianService.cpp 
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/RequestService.cpp
+# Find jsoncpp package
+find_package(jsoncpp REQUIRED)
+
+# Collect source files
+file(GLOB SRC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
 )
+
+# Create executable
+add_executable(exec ${SRC})
+
+# Link with JsonCpp
+target_link_libraries(exec PRIVATE JsonCpp::JsonCpp)

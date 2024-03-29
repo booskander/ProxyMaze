@@ -4,9 +4,8 @@
         "conan": {}
     },
     "include": [
-        "${sourceDir}/conan/debug/CMakePresets.json"
+        "/home/kali/gitrepos/ProxyMaze/build/CMakePresets.json"
     ],
-
     "configurePresets": [
         {
             "name": "conan-debug",
