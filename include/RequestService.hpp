@@ -2,8 +2,7 @@
 #include "FileManager.hpp"
 #include <algorithm>
 #include <cctype>
-// #include "httplib.h"
-// #include "httplib/httplib.h"
+#include "httplib.h"
 class RequestService {
 private:
     std::string baseURL = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=";
